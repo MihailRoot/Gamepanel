@@ -1,0 +1,79 @@
+﻿@model panel.Models.Server
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Server</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ip" class="control-label"></label>
+                <input asp-for="ip" class="form-control" />
+                <span asp-validation-for="ip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContainerId" class="control-label"></label>
+                <input asp-for="ContainerId" class="form-control" />
+                <span asp-validation-for="ContainerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Port" class="control-label"></label>
+                <input asp-for="Port" class="form-control" />
+                <span asp-validation-for="Port" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setup" class="control-label"></label>
+                <input asp-for="Setup" class="form-control" />
+                <span asp-validation-for="Setup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cpu" class="control-label"></label>
+                <input asp-for="cpu" class="form-control" />
+                <span asp-validation-for="cpu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="memory" class="control-label"></label>
+                <input asp-for="memory" class="form-control" />
+                <span asp-validation-for="memory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disk" class="control-label"></label>
+                <input asp-for="Disk" class="form-control" />
+                <span asp-validation-for="Disk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
