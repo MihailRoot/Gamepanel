@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mihail\\Desktop\\panel\\panel\\panel.csproj": {}
+    "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mihail\\Desktop\\panel\\panel\\panel.csproj": {
+    "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihail\\Desktop\\panel\\panel\\panel.csproj",
+        "projectUniqueName": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj",
         "projectName": "panel",
-        "projectPath": "C:\\Users\\Mihail\\Desktop\\panel\\panel\\panel.csproj",
+        "projectPath": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj",
         "packagesPath": "C:\\Users\\Mihail\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihail\\Desktop\\panel\\panel\\obj\\",
+        "outputPath": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mihail\\AppData\\Roaming\\NuGet\\NuGet.Config",

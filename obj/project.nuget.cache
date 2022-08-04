@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WpaSsahwvUxkgRRJmxGHCH4wxYPm7IuJzQwPajb3T3W9ma3rJ7rvJNAte/XGtYSsLSx4cc7N0xKtkBaqL4yroA==",
+  "dgSpecHash": "7/GQKQ8d4m42F4MOv7FVJvZ2odSYEE84hZ/LdY1GYgS30KWNuzoksd9TsLW7kR/2AKmOq1WXi51zwk04bl3IAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mihail\\Desktop\\panel\\panel\\panel.csproj",
+  "projectFilePath": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mihail\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mihail\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
