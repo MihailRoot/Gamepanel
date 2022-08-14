@@ -131,6 +131,19 @@ socket.onopen = function() {
     socket.send(JSON.stringify(fu))
 }
     </script>
+    <script>
+        $(".start").click(function() {
+    console.log('faaf')
+    var fa = {
+       "start":"dockercreate()",
+    }
+    //Засунуть ftp при включении сокета.Добавить включение его для подробной статистики.(Если всё пройдёт успешно при включении!!)
+    socket.send(JSON.stringify(fa));
+    socket.onopen = function() {
+        console.log("connected")
+    }
+})
+    </script>
  @*   <script>
 $(".start").click(function() {
     console.log('faaf')
