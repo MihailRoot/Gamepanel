@@ -10417,19 +10417,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mihail\\.nuget\\packages\\": {}
+    "C:\\Users\\Mihail\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mihail\\Desktop\\Gamepanel\\panel.csproj",
+      "projectUniqueName": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj",
       "projectName": "panel",
-      "projectPath": "C:\\Users\\mihail\\Desktop\\Gamepanel\\panel.csproj",
-      "packagesPath": "C:\\Users\\mihail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mihail\\Desktop\\Gamepanel\\obj\\",
+      "projectPath": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\panel.csproj",
+      "packagesPath": "C:\\Users\\Mihail\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mihail\\Desktop\\panel\\Gamepanel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mihail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mihail\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
