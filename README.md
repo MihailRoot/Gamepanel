@@ -23,7 +23,7 @@ Windows:
 - 3)Run dotner run in file ../Gamepanel/
 
 Links:
-sql server manager:
+- sql server manager:
 ~~~
 https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
 ~~~
