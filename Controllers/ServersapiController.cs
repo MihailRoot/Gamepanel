@@ -10,7 +10,8 @@ using panel.Models;
 
 namespace panel.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/Servers/Detailsapi/" )]
+    //[Route("api/[controller]")]
     [ApiController]
     public class ServersapiController : ControllerBase
     {

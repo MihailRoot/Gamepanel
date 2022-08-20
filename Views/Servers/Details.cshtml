@@ -14,14 +14,21 @@
         var term = new Terminal();
         term.open(document.getElementById('terminal'));
         term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
-        let  socket = new WebSocket('ws://localhost:3000/'); 
+        let  socket = new WebSocket('ws://20.54.74.6:3000/'); 
         const attachAddon = new AttachAddon.AttachAddon(socket)
         term.loadAddon(attachAddon);
         socket.onmessage = function(msg) {
             console.log(msg)
+        }  
+        socket.onopen = function() {
+        console.log("connected")
         }
         
       </script>
+<div class="form-group">
+  <input type="text" class="form-control" id="inp_1">
+</div>
+<button onclick="multi()"  class="btn btn-primary" >Отправить команду</button>
       <div>
           <h4>Server</h4>
           <hr />
@@ -87,6 +94,9 @@
               <dd class="col-sm-10">
                   @Html.DisplayFor(model => model.Disk)
               </dd>
+               <dd class="col-sm-10">
+                 <p id='idpanel'> @Html.DisplayFor(model => model.Id)</p>
+              </dd>
           </dl>
           <p>FTP_USER AND PASSWORD</p>
           <p id="nameuser"> @Html.DisplayFor(model => model.ftpuser)</p>
@@ -99,6 +109,45 @@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
     <script>
+        function multi(){
+        var command =  document.getElementById("inp_1").value
+        var fu = {
+            "command": "dockercommand()",
+            "com":command,
+        }
+        socket.send(JSON.stringify(fu))
+        }
+    </script>
+    <script>
+
+
+socket.onopen = function() {
+
+    var getid = document.getElementById("idpanel").innerHTML
+    console.log(getid)
+    var fu = {
+        "Id": getid
+    }
+    socket.send(JSON.stringify(fu))
+}
+    </script>
+    <script>
+    $(".start").click(function() {
+    console.log('faaf')
+    var getid = document.getElementById("idpanel").innerHTML
+
+    var fa = {
+       "Id": getid,
+       "start":"dockercreate()",
+    }
+    //Засунуть ftp при включении сокета.Добавить включение его для подробной статистики.(Если всё пройдёт успешно при включении!!)
+    socket.send(JSON.stringify(fa));
+    socket.onopen = function() {
+        console.log("connected")
+    }
+})
+    </script>
+ @*   <script>
 $(".start").click(function() {
     console.log('faaf')
     var getp = $("#containerid").text();
@@ -144,5 +193,5 @@ socket.onopen  = ("connection", function() {
     socket.send(JSON.stringify(fae))
     console.log("Connect")
 })
-    </script>
+    </script>*@
 </div>
