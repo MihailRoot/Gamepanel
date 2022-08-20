@@ -6,6 +6,9 @@ Its first version working panel(under docker)
 https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
 ~~~
 - !!!INSTALL DOCKER!!!
+~~~
+https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
+~~~
 - !!!Clone my repo 
 ~~~
 git clone https://github.com/MihailRoot/Gamepanel.git
@@ -24,3 +27,6 @@ sql server manager:
 ~~~
 https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
 ~~~
+
+
+P.S its not complited info about panel, please wait,linux will be support soon
