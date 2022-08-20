@@ -2,6 +2,9 @@
 Its first version working panel(under docker)
 - How to install:
 - !!!INSTALL SDK DOTNET AND ASP.NET!!!
+~~~
+https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
+~~~
 - !!!INSTALL DOCKER!!!
 - !!!Clone my repo 
 ~~~
@@ -15,3 +18,9 @@ Windows:
 - 1)(I recommend you install sql server manager, but you can use mysql) and then you need to write your datas to file: Gamepanel/applications.json
 - 2)In file Gamepanel\Views\Details.cs replace new WebSocket('ws://0.0.0.0:3000/'); on your server adress(where panelcontroller) 
 - 3)Run dotner run in file ../Gamepanel/
+
+Links:
+sql server manager:
+~~~
+https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
+~~~
