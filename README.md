@@ -2,7 +2,7 @@
 Its first version working panel(under docker)
 - How to install:
 - !!!INSTALL SDK DOTNET AND ASP.NET!!!
-- !!!INSTALL DOCKER!!!
+- !!!INSTALL DOCKER on linux server!!!
 - !!!Clone my repo 
 ~~~
 git clone https://github.com/MihailRoot/Gamepanel.git
