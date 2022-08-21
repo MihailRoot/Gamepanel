@@ -14,7 +14,7 @@
         var term = new Terminal();
         term.open(document.getElementById('terminal'));
         term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
-        let  socket = new WebSocket('ws://20.54.74.6:3000/'); 
+        let  socket = new WebSocket('ws://20.4.210.10:3000/'); 
         const attachAddon = new AttachAddon.AttachAddon(socket)
         term.loadAddon(attachAddon);
         socket.onmessage = function(msg) {
@@ -103,7 +103,9 @@
           <p id="passwordforuser">@Html.DisplayFor(model => model.ftppassword)</p>
       </div>
 <div>
-    <a  href="#" class="start">Включить сервер</a>
+    <a  href="#" class="start">Создать контейнер с сервером</a>
+      <a  href="#" class="running">Включить сервер</a>
+
      <a  href="#" class="stop">Выключить сервер</a>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
@@ -119,8 +121,36 @@
         }
     </script>
     <script>
+$(".running").click(function() {
+    console.log("openconnection => run")
 
+    var getid = document.getElementById("idpanel").innerHTML
 
+    var fa = {
+       "run":"dockerun()",
+        "Id": getid
+
+    }
+    socket.send(JSON.stringify(fa))
+})
+    </script>
+        <script>
+$(".stop").click(function() {
+    console.log("openconnection => run")
+
+    var getid = document.getElementById("idpanel").innerHTML
+
+    var fa = {
+       "stop":"dockerstop()",
+        "Id": getid
+
+    }
+    socket.send(JSON.stringify(fa))
+})
+    </script>
+    <script>
+
+        
 socket.onopen = function() {
 
     var getid = document.getElementById("idpanel").innerHTML
