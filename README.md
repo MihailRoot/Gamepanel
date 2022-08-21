@@ -5,7 +5,7 @@ Its first version working panel(under docker)
 ~~~
 https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
 ~~~
-- !!!INSTALL DOCKER!!!
+- !!!INSTALL DOCKER ON LUNUX SERVER!!!
 ~~~
 https://dotnet.microsoft.com/en-us/download/visual-studio-sdks
 ~~~
