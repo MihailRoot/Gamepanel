@@ -19,8 +19,8 @@ git clone https://github.com/MihailRoot/Gamepanel.git
 - dotnet ef database update -Context  ServerContext  
 - dotnet ef database update --context panelcontext
 ~~~
-- 1)Download panel on windows(or ubuntu)
-- 2)Download panelcontroller from panelcontroller(last realise)
+- 1)Download panel on windows
+- 2)Download panelcontroller from panelcontroller(last realise) on linux server
 
 Windows:
 - 1)(I recommend you install sql server manager, but you can use mysql) and then you need to write your datas to file: Gamepanel/applications.json
