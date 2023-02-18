@@ -65,8 +65,8 @@ namespace panel.Controllers
                 int ftppass = rnd.Next(12);
                 var user = await _identity.GetUserAsync(User);
                 var users = user.UserName;
-                server.ftpuser = users;
-                server.ftppassword = ftppass;
+             //   server.ftpuser = users;
+           //     server.ftppassword = ftppass;
                 _context.Add(server);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

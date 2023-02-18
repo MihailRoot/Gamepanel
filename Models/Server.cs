@@ -6,8 +6,7 @@
         public string Name { set; get; }
         public string email { set; get; }
         public string ip { set; get; }
-        public string? ftpuser { set; get; }
-        public int? ftppassword { set; get; }
+        /*public string ipnode { set; get; }*/
         public string? ContainerId { set; get; }
         public int Port { set; get; }
         public string? Setup { set; get; }

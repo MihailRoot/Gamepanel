@@ -7,24 +7,14 @@
           <link rel="stylesheet" href="~/js/node_modules/xterm/css/xterm.css" />
           <script src="~/js/node_modules/xterm/lib/xterm.js"></script>
           <script src="~/js/node_modules/xterm-addon-attach/lib/xterm-addon-attach.js"></script>
+	      <script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
 
 <h1>Details</h1>
 <div id="terminal"></div>
-      <script>
-        var term = new Terminal();
-        term.open(document.getElementById('terminal'));
-        term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
-        let  socket = new WebSocket('ws://20.4.210.10:3000/'); 
-        const attachAddon = new AttachAddon.AttachAddon(socket)
-        term.loadAddon(attachAddon);
-        socket.onmessage = function(msg) {
-            console.log(msg)
-        }  
-        socket.onopen = function() {
-        console.log("connected")
-        }
-        
-      </script>
+
 <div class="form-group">
   <input type="text" class="form-control" id="inp_1">
 </div>
@@ -52,6 +42,12 @@
               <dd class="col-sm-10">
                 <p id="Ip">  @Html.DisplayFor(model => model.ip)</p>
               </dd>
+@*              <dt class="col-sm-2">
+                  @Html.DisplayNameFor(model => model.ipnode)
+              </dt>
+              <dd class="col-sm-10">
+                <p id="Ip">  @Html.DisplayFor(model => model.ipnode)</p>
+              </dd>*@
               <dt class="col-sm-2">
                   @Html.DisplayNameFor(model => model.ContainerId)
               </dt>
@@ -99,8 +95,8 @@
               </dd>
           </dl>
           <p>FTP_USER AND PASSWORD</p>
-          <p id="nameuser"> @Html.DisplayFor(model => model.ftpuser)</p>
-          <p id="passwordforuser">@Html.DisplayFor(model => model.ftppassword)</p>
+          <p id="nameuser"> @Html.DisplayFor(model => model.email)</p>
+          <p id="passwordforuser">@Html.DisplayFor(model => model.Name)</p>
       </div>
 <div>
     <a  href="#" class="start">Создать контейнер с сервером</a>
@@ -110,6 +106,33 @@
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
+            <script >
+        var getidpanel;
+         getidpanel = document.getElementById("Ip").innerHTML.trimStart();
+
+            console.log(getidpanel)
+        </script>
+
+      <script>
+        var term = new Terminal();
+        term.open(document.getElementById('terminal'));
+        term.write('Container: \x1B[1;3;31mxterm.js\x1B[0m $ ')
+        var socket = new WebSocket(`ws://${getidpanel}:3000/`); 
+        const attachAddon = new AttachAddon.AttachAddon(socket)
+        term.loadAddon(attachAddon);
+        socket.onmessage = function(msg) {
+            console.log(msg)
+        }  
+        // setInterval(() => {
+        //     location.reload()
+        // }, 10000);
+        socket.onopen = function() {
+        console.log("Connection is stabled")
+        } 
+        socket.onclose = function(){
+                console.log("Connection was closed ")
+        }
+      </script>
     <script>
         function multi(){
         var command =  document.getElementById("inp_1").value
@@ -136,7 +159,7 @@ $(".running").click(function() {
     </script>
         <script>
 $(".stop").click(function() {
-    console.log("openconnection => run")
+    console.log("openconnection => stop")
 
     var getid = document.getElementById("idpanel").innerHTML
 
@@ -148,14 +171,14 @@ $(".stop").click(function() {
     socket.send(JSON.stringify(fa))
 })
     </script>
-    <script>
-
-        
+    <script>     
 socket.onopen = function() {
 
     var getid = document.getElementById("idpanel").innerHTML
+    var getip = document.getElementById("Ip").innerHTML.trim()
     console.log(getid)
     var fu = {
+        "ip":getip,
         "Id": getid
     }
     socket.send(JSON.stringify(fu))
